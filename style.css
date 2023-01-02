@@ -9,7 +9,7 @@ body {
 
 .container {
   width: 40vw;
-  height: 9rem;
+  /* height: 9rem; */
   background-color: #ffff;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -19,10 +19,15 @@ body {
   box-shadow: rgba(17, 17, 26, 0.3) 0px 8px 24px,
     rgba(17, 17, 26, 0.3) 0px 16px 56px, rgba(17, 17, 26, 0.3) 0px 24px 80px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+.user_input {
+  height: 9rem;
+  display: flex;
+  align-items: center;
+}
 .user_input input {
   /* margin-right: 4rem; */
   margin-left: 1rem;
@@ -51,4 +56,32 @@ body {
 .user_input button:hover {
   background-color: #60a5fa;
   color: black;
+}
+
+.country-flag {
+  width: 15rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.country-name {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.other-facts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.other-facts h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.other-facts h4 span {
+  font-size: 1rem;
 }
