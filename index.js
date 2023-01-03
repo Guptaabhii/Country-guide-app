@@ -22,11 +22,28 @@ searchBtn.addEventListener("click", () => {
       <h2 class = "country-name"> ${data[0].name.common} </h2>
 
       <div class = "other-facts">
+
       <h4>Capital: <span>${data[0].capital}</span></h4>
       <h4>Continent: <span>${data[0].continents}</span></h4>
       <h4>Population: <span>${data[0].population}</span></h4>
+      <h4>Status: <span>${data[0].status}</span></h4>
+      <h4>Sub Region: <span>${data[0].subregion}</span></h4>
+      <h4>Currency: <span>${
+        data[0].currencies[Object.keys(data[0].currencies)].name
+      } - ${Object.keys(data[0].currencies)[0]}</span></h4>
+      <h4>Languages: <span>${Object.values(data[0].languages)
+        .toString()
+        .split(",")
+        .join(", ")}</span></h4>
       
       </div>
       `;
+    })
+    .catch(() => {
+      if (countryName.length == 0) {
+        outputResult.innerHTML = `<h3 class = "error-msg">Input field cannot be empty.</h3>`;
+      } else {
+        outputResult.innerHTML = `<h3 class = "error-msg">Write valid country name.</h3>`;
+      }
     });
 });
